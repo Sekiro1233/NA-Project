@@ -1,0 +1,1 @@
+ x = x / np.linalg.norm(x, np.inf) 
