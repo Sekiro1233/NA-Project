@@ -1,2 +1,9 @@
-numpy
-scipy
+运行python文件所需的库：
+
+numpy   (1.11.3)
+scipy   (1.25.2)
+
+也可以直接在命令行运行以下代码来安装相应的python库：
+
+pip install numpy
+pip install scipy
