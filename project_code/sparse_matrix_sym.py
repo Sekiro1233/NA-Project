@@ -2,11 +2,20 @@ import numpy as np
 from scipy import sparse
 from scipy.sparse.linalg import eigs
 from scipy.sparse import csc_matrix
+import sys
+from PyQt5.QtWidgets import (
+    QApplication,
+    QWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QTextEdit,
+    QPushButton,
+)
+from PyQt5.QtGui import QFont
 
-
+"""
 # 题目1：生成随机矩阵******************************************************************************
 print("题目1: ————————————————————————————————————————")
-
 
 # (1)生成一个10x10的随机矩阵
 matrix = np.random.rand(10, 10) * 10
@@ -16,6 +25,7 @@ print("矩阵(1): ")
 # 生成一个10*10的随机对称矩阵
 matrix1 = (matrix + matrix.T) / 2
 print(matrix1)
+"""
 
 
 # (2)生成一个10000x10000维度且密度为0.001的随机稀疏矩阵，并计算非零元素的数量
@@ -29,6 +39,7 @@ def sparse_sym_matrix(n, density):
     return upper_tri + lower_tri
 
 
+"""
 matrix_2 = sparse_sym_matrix(10000, 0.001)
 
 nonzero_cnt = matrix_2.count_nonzero()
@@ -51,6 +62,7 @@ print(eigenvalues2)
 
 # 题目2：给出 Power Method 的伪代码并⽤代码实现，能够输出绝对值最⼤的特征值********************************************************************************
 print("题目2: ————————————————————————————————————————")
+"""
 
 
 # 实现power method
@@ -75,6 +87,7 @@ def power_method(matrix, tol, max_iter):
     return "The maximum number of iterations exceeded"
 
 
+"""
 # (1)利用power method求解matrix1中绝对值最大的特征值
 eigenvalue_pm1, _ = power_method(matrix1, 1e-6, 1000)
 print("(1)")
@@ -89,6 +102,7 @@ print(
 
 # 题目3：给出 QR 算法的伪代码并⽤代码实现，并能够实现输出前k个绝对值最⼤的特征值，其中k为⾃定义参数**************************************
 print("题目3: ————————————————————————————————————————")
+"""
 
 
 # 实现QR分解
@@ -144,6 +158,7 @@ def qr_iteration(matrix, k):
     return eigenvalues
 
 
+"""
 print("(1)")
 print("矩阵(1)前4个绝对值最大的特征值为：")
 print(qr_iteration(matrix1, 4))
@@ -152,6 +167,7 @@ print("矩阵(2)前5个绝对值最大的特征值为：")  # print(qr_iteration
 
 # 题目4：⽤代码实现 Arnoldi 迭代算法，并能够实现输出前 k 个绝对值最⼤的特征值，其中 k 为自定义参数**************************************
 print("题目4: ————————————————————————————————————————")
+"""
 
 
 # 对于小的方阵，我们直接将其全部计算，得到的特征值更准确
@@ -194,16 +210,14 @@ def arnoldi_iteration2(matrix, k):
     return eigenvalues
 
 
+"""
 print("(1)")
 print("矩阵(1)前6个绝对值最大的特征值为：")
 print(arnoldi_iteration1(matrix1, 6))
 print("(2)")
 print("矩阵(2)前7个绝对值最大的特征值为：")
 print(arnoldi_iteration2(matrix2.toarray(), 7))
-
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QTextEdit, QPushButton
-from PyQt5.QtGui import QFont
+"""
 
 
 class MainWindow(QWidget):
@@ -277,13 +291,16 @@ class MainWindow(QWidget):
 
         # Run code for question 3
         self.textbox3.setText("题目3: ————————————————————————————————————————\n\n")
-        eigenvalues1 = qr_iteration(matrix1, 4) # eigenvalues2 = qr_iteration(matrix2.toarray(), 5)
+        eigenvalues1 = qr_iteration(
+            matrix1, 4
+        )  # eigenvalues2 = qr_iteration(matrix2.toarray(), 5)
         self.textbox3.append("(1)\n")
         self.textbox3.append("矩阵(1)前4个绝对值最大的特征值为：\n")
         self.textbox3.append(str(eigenvalues1) + "\n\n")
         self.textbox3.append("(2)\n")
-        self.textbox3.append("矩阵(2)前5个绝对值最大的特征值为：\n")
-        self.textbox3.append(str(eigenvalues2) + "\n")
+        self.textbox3.append(
+            "矩阵(2)前5个绝对值最大的特征值为：\n"
+        )  # self.textbox3.append(str(eigenvalues2) + "\n")
 
         # Run code for question 4
         self.textbox4.setText("题目4: ————————————————————————————————————————\n\n")
