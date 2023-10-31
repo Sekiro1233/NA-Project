@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import (
     QTextEdit,
     QPushButton,
 )
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QPalette, QColor
 
 """
 # 题目1：生成随机矩阵******************************************************************************
@@ -225,13 +225,21 @@ class MainWindow(QWidget):
         super().__init__()
 
         # Set window properties
-        self.setWindowTitle("Sparse Matrix Operations")
+        self.setWindowTitle("矩阵特征值计算(对称阵版本，但为了减少对矩阵的处理，稀疏矩阵密度可能不太准确)")
         self.setGeometry(100, 100, 800, 600)
 
         # Set font
         font = QFont()
         font.setPointSize(12)
         self.setFont(font)
+
+        # Set color palette
+        palette = QPalette()
+        palette.setColor(
+            QPalette.Window, QColor(238, 232, 170)
+        )  # Set background color to gray
+        palette.setColor(QPalette.Text, QColor(145,44, 238))
+        self.setPalette(palette)
 
         # Create text boxes
         self.textbox1 = QTextEdit()
@@ -240,8 +248,9 @@ class MainWindow(QWidget):
         self.textbox4 = QTextEdit()
 
         # Create button
-        self.button = QPushButton("Run Code")
+        self.button = QPushButton("点击按钮，开始解题(建议最大化窗口)")
         self.button.clicked.connect(self.run_code)
+        self.button.setStyleSheet("background-color: lightblue; color: green;")
 
         # Create layout
         vbox = QVBoxLayout()

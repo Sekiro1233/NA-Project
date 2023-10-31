@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import (
     QTextEdit,
     QPushButton,
 )
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QPalette, QColor
 
 
 """
@@ -210,13 +210,21 @@ class MainWindow(QWidget):
         super().__init__()
 
         # Set window properties
-        self.setWindowTitle("矩阵特征值计算")
+        self.setWindowTitle("矩阵特征值计算(非对称阵版本，涉及大量复数计算，加载时间稍长)")
         self.setGeometry(100, 100, 800, 600)
 
         # Set font
         font = QFont()
         font.setPointSize(12)
         self.setFont(font)
+
+        # Set color palette
+        palette = QPalette()
+        palette.setColor(
+            QPalette.Window, QColor(205, 190, 112)
+        )  # Set background color to gray
+        palette.setColor(QPalette.Text, QColor(106,90,205)) 
+        self.setPalette(palette)
 
         # Create text boxes
         self.textbox1 = QTextEdit()
