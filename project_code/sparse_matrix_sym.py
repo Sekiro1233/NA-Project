@@ -201,3 +201,104 @@ print("(2)")
 print("矩阵(2)前7个绝对值最大的特征值为：")
 print(arnoldi_iteration2(matrix2.toarray(), 7))
 
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QTextEdit, QPushButton
+from PyQt5.QtGui import QFont
+
+
+class MainWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+
+        # Set window properties
+        self.setWindowTitle("Sparse Matrix Operations")
+        self.setGeometry(100, 100, 800, 600)
+
+        # Set font
+        font = QFont()
+        font.setPointSize(12)
+        self.setFont(font)
+
+        # Create text boxes
+        self.textbox1 = QTextEdit()
+        self.textbox2 = QTextEdit()
+        self.textbox3 = QTextEdit()
+        self.textbox4 = QTextEdit()
+
+        # Create button
+        self.button = QPushButton("Run Code")
+        self.button.clicked.connect(self.run_code)
+
+        # Create layout
+        vbox = QVBoxLayout()
+        hbox1 = QHBoxLayout()
+        hbox2 = QHBoxLayout()
+
+        hbox1.addWidget(self.textbox1)
+        hbox1.addWidget(self.textbox2)
+        hbox2.addWidget(self.textbox3)
+        hbox2.addWidget(self.textbox4)
+
+        vbox.addLayout(hbox1)
+        vbox.addLayout(hbox2)
+        vbox.addWidget(self.button)
+
+        self.setLayout(vbox)
+
+    def run_code(self):
+        # Run code for question 1
+        self.textbox1.setText("题目1: ————————————————————————————————————————\n\n")
+        matrix = np.random.rand(10, 10) * 10
+        matrix1 = (matrix + matrix.T) / 2
+        matrix_2 = sparse_sym_matrix(10000, 0.001)
+        nonzero_cnt = matrix_2.count_nonzero()
+        matrix2 = csc_matrix(matrix_2)
+        eigenvalues1 = np.linalg.eigvals(matrix1)
+        eigenvalues2, _ = eigs(matrix2, k=8)
+        self.textbox1.append("(1)\n")
+        self.textbox1.append("矩阵(1):\n")
+        self.textbox1.append(str(matrix1) + "\n\n")
+        self.textbox1.append("(2)\n")
+        self.textbox1.append("非零元素数量: " + str(nonzero_cnt) + "\n\n")
+        self.textbox1.append("(3)\n")
+        self.textbox1.append("矩阵(1)特征值:\n")
+        self.textbox1.append(str(eigenvalues1) + "\n")
+        self.textbox1.append("矩阵(2)特征值:\n")
+        self.textbox1.append(str(eigenvalues2) + "\n")
+
+        # Run code for question 2
+        self.textbox2.setText("题目2: ————————————————————————————————————————\n\n")
+        eigenvalue_pm1, _ = power_method(matrix1, 1e-6, 1000)
+        eigenvalue_pm2, _ = power_method(matrix2.toarray(), 1e-6, 1000)
+        self.textbox2.append("(1)\n")
+        self.textbox2.append("矩阵(1)绝对值最大的特征值: " + str(eigenvalue_pm1) + "\n\n")
+        self.textbox2.append("(2)\n")
+        self.textbox2.append("矩阵(2)绝对值最大的特征值: " + str(eigenvalue_pm2) + "\n")
+
+        # Run code for question 3
+        self.textbox3.setText("题目3: ————————————————————————————————————————\n\n")
+        eigenvalues1 = qr_iteration(matrix1, 4) # eigenvalues2 = qr_iteration(matrix2.toarray(), 5)
+        self.textbox3.append("(1)\n")
+        self.textbox3.append("矩阵(1)前4个绝对值最大的特征值为：\n")
+        self.textbox3.append(str(eigenvalues1) + "\n\n")
+        self.textbox3.append("(2)\n")
+        self.textbox3.append("矩阵(2)前5个绝对值最大的特征值为：\n")
+        self.textbox3.append(str(eigenvalues2) + "\n")
+
+        # Run code for question 4
+        self.textbox4.setText("题目4: ————————————————————————————————————————\n\n")
+        eigenvalues1 = arnoldi_iteration1(matrix1, 6)
+        eigenvalues2 = arnoldi_iteration2(matrix2.toarray(), 7)
+        self.textbox4.append("(1)\n")
+        self.textbox4.append("矩阵(1)前6个绝对值最大的特征值为：\n")
+        self.textbox4.append(str(eigenvalues1) + "\n\n")
+        self.textbox4.append("(2)\n")
+        self.textbox4.append("矩阵(2)前7个绝对值最大的特征值为：\n")
+        self.textbox4.append(str(eigenvalues2) + "\n")
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
