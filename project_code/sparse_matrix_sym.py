@@ -12,6 +12,8 @@ from PyQt5.QtWidgets import (
     QPushButton,
 )
 from PyQt5.QtGui import QFont, QPalette, QColor
+import webbrowser
+import os 
 
 """
 # 题目1：生成随机矩阵******************************************************************************
@@ -252,6 +254,11 @@ class MainWindow(QWidget):
         self.button.clicked.connect(self.run_code)
         self.button.setStyleSheet("background-color: lightblue; color: green;")
 
+        # Create README button
+        self.readme_button = QPushButton("点击跳转github上的说明文档(建议设置好网络规则)")
+        self.readme_button.clicked.connect(self.open_readme)
+        self.readme_button.setStyleSheet("background-color: lightblue; color: green;")
+
         # Create layout
         vbox = QVBoxLayout()
         hbox1 = QHBoxLayout()
@@ -265,6 +272,7 @@ class MainWindow(QWidget):
         vbox.addLayout(hbox1)
         vbox.addLayout(hbox2)
         vbox.addWidget(self.button)
+        vbox.addWidget(self.readme_button)
 
         self.setLayout(vbox)
 
@@ -322,7 +330,8 @@ class MainWindow(QWidget):
         self.textbox4.append("矩阵(2)前7个绝对值最大的特征值为：\n")
         self.textbox4.append(str(eigenvalues2) + "\n")
 
-
+    def open_readme(self):
+        webbrowser.open('https://github.com/Sekiro1233/NA-Project/blob/master/project_code/README.md')
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
