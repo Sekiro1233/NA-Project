@@ -1,9 +1,13 @@
-运行python文件所需的库：
+运行python文件所需调用的库：
 
-numpy   (1.11.3)
-scipy   (1.25.2)
+numpy
+scipy
+PyQt5
+sys
+webbrowser
 
-也可以直接在命令行运行以下代码来安装相应的python库：
+也可以直接在cmd运行以下代码来安装需要的python库：
 
 pip install numpy
 pip install scipy
+pip install PyQt5

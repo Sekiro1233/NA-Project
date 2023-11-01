@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import (
     QPushButton,
 )
 from PyQt5.QtGui import QFont, QPalette, QColor
+import webbrowser
 
 
 """
@@ -218,14 +219,14 @@ class MainWindow(QWidget):
         font.setPointSize(12)
         self.setFont(font)
 
-        # Set color palette
+         # Set color palette
         palette = QPalette()
         palette.setColor(
-            QPalette.Window, QColor(205, 190, 112)
+            QPalette.Window, QColor(238, 232, 170)
         )  # Set background color to gray
-        palette.setColor(QPalette.Text, QColor(106,90,205)) 
+        palette.setColor(QPalette.Text, QColor(145, 44, 238))
         self.setPalette(palette)
-
+        
         # Create text boxes
         self.textbox1 = QTextEdit()
         self.textbox2 = QTextEdit()
@@ -235,6 +236,12 @@ class MainWindow(QWidget):
         # Create button
         self.button = QPushButton("点击按钮，开始解题(建议最大化窗口)")
         self.button.clicked.connect(self.run_code)
+        self.button.setStyleSheet("background-color: lightblue; color: green;")
+
+        # Create README button
+        self.readme_button = QPushButton("点击跳转github上的说明文档(建议设置好网络规则)")
+        self.readme_button.clicked.connect(self.open_readme)
+        self.readme_button.setStyleSheet("background-color: lightblue; color: green;")
 
         # Create layout
         vbox = QVBoxLayout()
@@ -249,6 +256,7 @@ class MainWindow(QWidget):
         vbox.addLayout(hbox1)
         vbox.addLayout(hbox2)
         vbox.addWidget(self.button)
+        vbox.addWidget(self.readme_button)
 
         self.setLayout(vbox)
 
@@ -304,6 +312,11 @@ class MainWindow(QWidget):
         self.textbox4.append("(2)\n")
         self.textbox4.append("矩阵(2)前7个绝对值最大的特征值为：\n")
         self.textbox4.append(str(eigenvalues2) + "\n")
+
+    def open_readme(self):
+        webbrowser.open(
+            "https://github.com/Sekiro1233/NA-Project/blob/master/project_code/README.md"
+        )
 
 
 if __name__ == "__main__":

@@ -13,7 +13,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtGui import QFont, QPalette, QColor
 import webbrowser
-import os 
+
 
 """
 # 题目1：生成随机矩阵******************************************************************************
@@ -30,11 +30,14 @@ print(matrix1)
 """
 
 
-# (2)生成一个10000x10000维度且密度为0.001的随机稀疏矩阵，并计算非零元素的数量
+# (2)生成一个10000x10000维度且密度为0.001的随机稀疏矩阵且为对称阵，并计算非零元素的数量
 def sparse_sym_matrix(n, density):
-    num_elements = int(n * n * density / 2)
-    row = np.random.randint(0, n, size=num_elements)
-    col = np.random.randint(0, n, size=num_elements)
+    num_elements = int(n * (n + 1) * density / 2)
+    indices = np.triu_indices(n)
+    available_positions = len(indices[0])
+    positions = np.random.choice(available_positions, size=num_elements, replace=False)
+    row = indices[0][positions]
+    col = indices[1][positions]
     data = np.random.rand(num_elements)
     upper_tri = sparse.coo_matrix((data, (row, col)), shape=(n, n))
     lower_tri = sparse.coo_matrix((data, (col, row)), shape=(n, n))
@@ -194,6 +197,8 @@ def arnoldi_iteration1(matrix, k):
 
 # 对于大的稀疏矩阵，我们只考虑前k列(k<<n)，计算部分特征值，得到的特征值可能不准确
 def arnoldi_iteration2(matrix, k):
+    m=k
+    k=30
     n = matrix.shape[0]
     Q = np.zeros((n, k + 1))
     H = np.zeros((k + 1, k))
@@ -208,8 +213,9 @@ def arnoldi_iteration2(matrix, k):
         if H[j + 1, j] == 0:
             break
         Q[:, j + 1] = v / H[j + 1, j]
-    eigenvalues = qr_iteration(H[:k,], k)
+    eigenvalues = qr_iteration(H[:k,:k], m)
     return eigenvalues
+
 
 
 """
@@ -240,7 +246,7 @@ class MainWindow(QWidget):
         palette.setColor(
             QPalette.Window, QColor(238, 232, 170)
         )  # Set background color to gray
-        palette.setColor(QPalette.Text, QColor(145,44, 238))
+        palette.setColor(QPalette.Text, QColor(145, 44, 238))
         self.setPalette(palette)
 
         # Create text boxes
@@ -285,7 +291,7 @@ class MainWindow(QWidget):
         nonzero_cnt = matrix_2.count_nonzero()
         matrix2 = csc_matrix(matrix_2)
         eigenvalues1 = np.linalg.eigvals(matrix1)
-        eigenvalues2, _ = eigs(matrix2, k=8)
+        eigenvalues2, _ = eigs(matrix2, k=7)
         self.textbox1.append("(1)\n")
         self.textbox1.append("矩阵(1):\n")
         self.textbox1.append(str(matrix1) + "\n\n")
@@ -331,7 +337,11 @@ class MainWindow(QWidget):
         self.textbox4.append(str(eigenvalues2) + "\n")
 
     def open_readme(self):
-        webbrowser.open('https://github.com/Sekiro1233/NA-Project/blob/master/project_code/README.md')
+        webbrowser.open(
+            "https://github.com/Sekiro1233/NA-Project/blob/master/project_code/README.md"
+        )
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
