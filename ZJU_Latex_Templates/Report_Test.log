@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.20)  31 OCT 2023 21:19
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.20)  1 NOV 2023 14:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -514,25 +514,51 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count327
 \@lastruleclass=\count328
 \@thisrulewidth=\dimen287
+) (d:/texlive/2023/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (d:/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks29
+\c@algorithm=\count329
+) (d:/texlive/2023/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (d:/texlive/2023/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count330
+\c@ALG@rem=\count331
+\c@ALG@nested=\count332
+\ALG@tlm=\skip89
+\ALG@thistlm=\skip90
+\c@ALG@Lnr=\count333
+\c@ALG@blocknr=\count334
+\c@ALG@storecount=\count335
+\c@ALG@tmpcounter=\count336
+\ALG@tmplength=\skip91
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 )) (./Report_Test.aux)
 \openout1 = `Report_Test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -568,36 +594,36 @@ LaTeX Font Info:    ... okay on input line 16.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count329
+\c@lstlisting=\count337
 File: figures//../source/logo/cover.png Graphic file (type bmp)
 <figures//../source/logo/cover.png>
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 17.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 18.
 (d:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 17.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 18.
  (d:/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 17.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 18.
  (d:/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 17.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 18.
  (d:/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15.05624> on input line 17.
+(Font)              <15.05624> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12.045> on input line 17.
+(Font)              <12.045> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.03374> on input line 17.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+(Font)              <9.03374> on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
  (d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -606,34 +632,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: figures//../source/logo/project.png Graphic file (type bmp)
 <figures//../source/logo/project.png>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.53937> on input line 18.
+(Font)              <10.53937> on input line 19.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 18.
+(Font)              <7> on input line 19.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 18.
+(Font)              <5> on input line 19.
 
-Overfull \hbox (11.50417pt too wide) in alignment at lines 18--18
+Overfull \hbox (11.50417pt too wide) in alignment at lines 19--19
 [][] 
  []
 
 
-Overfull \hbox (2.33974pt too wide) in paragraph at lines 18--18
+Overfull \hbox (2.33974pt too wide) in paragraph at lines 19--19
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (27.88196pt too wide) in alignment at lines 18--18
+Overfull \hbox (27.88196pt too wide) in alignment at lines 19--19
 [][][][][][]
  []
 
-[2] (./Report_Test.aux) ) 
+(./Report_Test.toc)
+\tf@toc=\write3
+\openout3 = `Report_Test.toc'.
+
+ [2]
+Overfull \hbox (23.98pt too wide) in paragraph at lines 46--47
+\TU/SimSun(0)/m/n/10.53937 和\TU/lmr/m/n/10.53937 ’open_readme’\TU/SimSun(0)/m/n/10.53937 。| \TU/lmr/m/n/10.53937 ’run_code’ \TU/SimSun(0)/m/n/10.53937 方 法 用 于 获 取 用 户 输 入，|  调 用 相 应 的 函 数 执 行 计 算，|  然 后 显 示 结 果。| \TU/lmr/m/n/10.53937 ’open_readme’
+ []
+
+[3] [4] (./Report_Test.aux) ) 
 Here is how much of TeX's memory you used:
- 12978 strings out of 476683
- 303150 string characters out of 5807575
- 1849012 words of memory out of 5000000
- 33004 multiletter control sequences out of 15000+600000
- 539089 words of font info for 86 fonts, out of 8000000 for 9000
+ 13770 strings out of 476683
+ 323341 string characters out of 5807575
+ 1871012 words of memory out of 5000000
+ 33771 multiletter control sequences out of 15000+600000
+ 539137 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,14n,111p,1202b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Report_Test.pdf (2 pages).
+Output written on Report_Test.pdf (4 pages).

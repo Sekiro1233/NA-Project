@@ -1,0 +1,37 @@
+// The Round Table
+digraph {
+	graph [rankdir=LR ranksep=0.7]
+	1 [label="Import necessary libraries" height=0.5 shape=box width=0.5]
+	1.1 [label="Define sparse_sym_matrix function" height=0.5 shape=box width=0.5]
+	"1.1.1" [label="Generate random matrix" height=0.5 shape=box width=0.5]
+	"1.1.2" [label="Sparse the matrix" height=0.5 shape=box width=0.5]
+	"1.1.3" [label="Symmetrize the matrix" height=0.5 shape=box width=0.5]
+	1.2 [label="Define power_method function" height=0.5 shape=box width=0.5]
+	1.3 [label="Define qr_iteration function" height=0.5 shape=box width=0.5]
+	1.4 [label="Define arnoldi_iteration1 function" height=0.5 shape=box width=0.5]
+	1.5 [label="Define arnoldi_iteration2 function" height=0.5 shape=box width=0.5]
+	2 [label="Define MainWindow class" height=0.5 shape=box width=0.5]
+	2.1 [label="Define run_code method" height=0.5 shape=box width=0.5]
+	"2.1.1" [label="Get user input" height=0.5 shape=box width=0.5]
+	"2.1.2" [label="Call corresponding function to execute calculation" height=0.5 shape=box width=0.5]
+	"2.1.3" [label="Display results" height=0.5 shape=box width=0.5]
+	2.2 [label="Define open_readme method" height=0.5 shape=box width=0.5]
+	"2.2.1" [label="Open documentation on GitHub" height=0.5 shape=box width=0.5]
+	3 [label="Create QApplication object and MainWindow object" height=0.5 shape=box width=0.5]
+	3.1 [label="Display GUI window" height=0.5 shape=box width=0.5]
+	1 -> 1.1
+	1.1 -> "1.1.1"
+	1.1 -> "1.1.2"
+	1.1 -> "1.1.3"
+	1 -> 1.2
+	1 -> 1.3
+	1 -> 1.4
+	1 -> 1.5
+	2 -> 2.1
+	2.1 -> "2.1.1"
+	2.1 -> "2.1.2"
+	2.1 -> "2.1.3"
+	2 -> 2.2
+	2.2 -> "2.2.1"
+	3 -> 3.1
+}
