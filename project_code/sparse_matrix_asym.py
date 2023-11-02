@@ -63,7 +63,7 @@ def power_method(matrix, tol, max_iter):
         y = matrix @ x
         p = np.argmin(np.abs(y))
         if y[p] == 0:
-            return "Eigenvector", x
+            return "y[p] == 0", x
         mu = y[p]
         err = np.linalg.norm(x - y / y[p], np.inf)
         x = y / y[p]
@@ -211,7 +211,7 @@ class MainWindow(QWidget):
         super().__init__()
 
         # Set window properties
-        self.setWindowTitle("矩阵特征值计算(非对称阵版本，涉及大量复数计算，加载时间稍长)")
+        self.setWindowTitle("矩阵特征值计算(非对称阵版本)")
         self.setGeometry(100, 100, 800, 600)
 
         # Set font
@@ -219,14 +219,14 @@ class MainWindow(QWidget):
         font.setPointSize(12)
         self.setFont(font)
 
-         # Set color palette
+        # Set color palette
         palette = QPalette()
         palette.setColor(
             QPalette.Window, QColor(238, 232, 170)
         )  # Set background color to gray
         palette.setColor(QPalette.Text, QColor(145, 44, 238))
         self.setPalette(palette)
-        
+
         # Create text boxes
         self.textbox1 = QTextEdit()
         self.textbox2 = QTextEdit()

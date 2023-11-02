@@ -82,7 +82,7 @@ def power_method(matrix, tol, max_iter):
         y = matrix @ x
         p = np.argmin(np.abs(y))
         if y[p] == 0:
-            return "Eigenvector", x
+            return "y[p] == 0", x
         mu = y[p]
         err = np.linalg.norm(x - y / y[p], np.inf)
         x = y / y[p]
@@ -197,8 +197,8 @@ def arnoldi_iteration1(matrix, k):
 
 # 对于大的稀疏矩阵，我们只考虑前k列(k<<n)，计算部分特征值，得到的特征值可能不准确
 def arnoldi_iteration2(matrix, k):
-    m=k
-    k=30
+    m = k
+    k = 30
     n = matrix.shape[0]
     Q = np.zeros((n, k + 1))
     H = np.zeros((k + 1, k))
@@ -213,9 +213,8 @@ def arnoldi_iteration2(matrix, k):
         if H[j + 1, j] == 0:
             break
         Q[:, j + 1] = v / H[j + 1, j]
-    eigenvalues = qr_iteration(H[:k,:k], m)
+    eigenvalues = qr_iteration(H[:k, :k], m)
     return eigenvalues
-
 
 
 """
@@ -233,7 +232,7 @@ class MainWindow(QWidget):
         super().__init__()
 
         # Set window properties
-        self.setWindowTitle("矩阵特征值计算(对称阵版本，但为了减少对矩阵的处理，稀疏矩阵密度可能不太准确)")
+        self.setWindowTitle("矩阵特征值计算(对称阵版本)")
         self.setGeometry(100, 100, 800, 600)
 
         # Set font

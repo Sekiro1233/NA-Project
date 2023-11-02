@@ -26,6 +26,7 @@
 \RequirePackage{algorithm}
 \RequirePackage{algpseudocode}
 
+
 % 宏定义命令
   % 定义°为\degree 不需要$, \deg 需要$
   \def\deg{^{\circ}}

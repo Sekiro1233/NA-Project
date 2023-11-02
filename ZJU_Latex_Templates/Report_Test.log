@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.20)  1 NOV 2023 14:14
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.20)  2 NOV 2023 22:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -540,25 +540,86 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip91
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-)) (./Report_Test.aux)
+)) (./Report_Test.aux
+
+LaTeX Warning: Label `fig:subfig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig:a' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:subfig:b' multiply defined.
+
+
+LaTeX Warning: Label `fig:subfig' multiply defined.
+
+)
 \openout1 = `Report_Test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -597,33 +658,33 @@ LaTeX Font Info:    ... okay on input line 17.
 \c@lstlisting=\count337
 File: figures//../source/logo/cover.png Graphic file (type bmp)
 <figures//../source/logo/cover.png>
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 18.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 20.
 (d:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 18.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 20.
  (d:/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 18.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 20.
  (d:/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 18.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 20.
  (d:/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15.05624> on input line 18.
+(Font)              <15.05624> on input line 20.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12.045> on input line 18.
+(Font)              <12.045> on input line 20.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.03374> on input line 18.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+(Font)              <9.03374> on input line 20.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
  (d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
  (d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -632,23 +693,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: figures//../source/logo/project.png Graphic file (type bmp)
 <figures//../source/logo/project.png>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.53937> on input line 19.
+(Font)              <10.53937> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 19.
+(Font)              <7> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 19.
+(Font)              <5> on input line 21.
 
-Overfull \hbox (11.50417pt too wide) in alignment at lines 19--19
+Overfull \hbox (11.50417pt too wide) in alignment at lines 21--21
 [][] 
  []
 
 
-Overfull \hbox (2.33974pt too wide) in paragraph at lines 19--19
+Overfull \hbox (2.33974pt too wide) in paragraph at lines 21--21
 []$[]$  $[]$ 
  []
 
 
-Overfull \hbox (27.88196pt too wide) in alignment at lines 19--19
+Overfull \hbox (27.88196pt too wide) in alignment at lines 21--21
 [][][][][][]
  []
 
@@ -657,18 +718,101 @@ Overfull \hbox (27.88196pt too wide) in alignment at lines 19--19
 \openout3 = `Report_Test.toc'.
 
  [2]
-Overfull \hbox (23.98pt too wide) in paragraph at lines 46--47
+Overfull \hbox (23.98pt too wide) in paragraph at lines 47--48
 \TU/SimSun(0)/m/n/10.53937 和\TU/lmr/m/n/10.53937 ’open_readme’\TU/SimSun(0)/m/n/10.53937 。| \TU/lmr/m/n/10.53937 ’run_code’ \TU/SimSun(0)/m/n/10.53937 方 法 用 于 获 取 用 户 输 入，|  调 用 相 应 的 函 数 执 行 计 算，|  然 后 显 示 结 果。| \TU/lmr/m/n/10.53937 ’open_readme’
  []
 
-[3] [4] (./Report_Test.aux) ) 
-Here is how much of TeX's memory you used:
- 13770 strings out of 476683
- 323341 string characters out of 5807575
- 1871012 words of memory out of 5000000
- 33771 multiletter control sequences out of 15000+600000
- 539137 words of font info for 92 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 103i,14n,111p,1202b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+File: pic//lct.png Graphic file (type bmp)
+<pic//lct.png>
+[3] [4] [5] [6] [7]
+Overfull \hbox (9.37321pt too wide) in paragraph at lines 202--203
+\TU/SimSun(0)/m/n/10.53937 阵 分 解 简 化 为 矩 阵 分 解 为 $\OML/lmm/m/it/10.53937 AQ[] \OT1/lmr/m/n/10.53937 = \OML/lmm/m/it/10.53937 Q[][]$\TU/lmr/m/n/10.53937 , \TU/SimSun(0)/m/n/10.53937 其 中 $\OML/lmm/m/it/10.53937 Q[] \OT1/lmr/m/n/10.53937 = []$\TU/lmr/m/n/10.53937 , $[] \OT1/lmr/m/n/10.53937 = []$ 
+ []
 
-Output written on Report_Test.pdf (4 pages).
+File: pic//ui.png Graphic file (type bmp)
+<pic//ui.png>
+[8]
+File: pic//jt.png Graphic file (type bmp)
+<pic//jt.png>
+File: pic//js.png Graphic file (type bmp)
+<pic//js.png>
+File: pic//sm.png Graphic file (type bmp)
+<pic//sm.png>
+ [9]
+File: pic//mk.png Graphic file (type bmp)
+<pic//mk.png>
+File: pic//p11a.png Graphic file (type bmp)
+<pic//p11a.png>
+ [10]
+File: pic//p11.png Graphic file (type bmp)
+<pic//p11.png>
+
+Overfull \hbox (15.84387pt too wide) in paragraph at lines 279--284
+[]\TU/SimSun(0)/m/n/10.53937 当 然 这 样 生 成 出 来 的 矩 阵 是 一 个 不 对 称 的 矩 阵，|  计 算 特 征 值 的 时 候 有 很 大 概 率 是 复 数，|  所 以 我 又 使 用 $[]\OML/lmm/m/it/10.53937 matrix \OT1/lmr/m/n/10.53937 =
+ []
+
+File: pic//p12a.png Graphic file (type bmp)
+<pic//p12a.png>
+[11]
+Overfull \hbox (29.44942pt too wide) in paragraph at lines 296--297
+[]\TU/SimSun(0)/m/n/10.53937 然 后 我 首 先 使 用 $[]\OML/lmm/m/it/10.53937 np:triu[]ndices[]$ \TU/SimSun(0)/m/n/10.53937 生 成 上 三 角 矩 阵 的 所 有 索 引，|  然 后 从 中 随 机 选 择 一 部 分。|  使 用 $[]\OML/lmm/m/it/10.53937 np:random:choice[]$
+ []
+
+(d:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Overfull \hbox (31.67963pt too wide) in paragraph at lines 315--316
+[]\TU/SimSun(0)/m/n/10.53937 接 下 来 是 使 用 库 函 数 来 计 算 我 们 生 成 矩 阵 的 特 征 值，|  这 里 我 使 用 了 $[]\OML/lmm/m/it/10.53937 np:linalg:eigvals[]$ \TU/SimSun(0)/m/n/10.53937 和 $[]\OML/lmm/m/it/10.53937 scipy:sparse:linalg:eigs[]$
+ []
+
+File: pic//p13a.png Graphic file (type bmp)
+<pic//p13a.png>
+File: pic//p123.png Graphic file (type bmp)
+<pic//p123.png>
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+
+ []
+
+File: pic//p2a.png Graphic file (type bmp)
+<pic//p2a.png>
+File: pic//p2.png Graphic file (type bmp)
+<pic//p2.png>
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+
+ []
+
+File: pic//p31a.png Graphic file (type bmp)
+<pic//p31a.png>
+File: pic//p3.png Graphic file (type bmp)
+<pic//p3.png>
+[14]
+File: pic//one.png Graphic file (type bmp)
+<pic//one.png>
+File: pic//two.png Graphic file (type bmp)
+<pic//two.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--437
+
+ []
+
+File: pic//p4a.png Graphic file (type bmp)
+<pic//p4a.png>
+File: pic//p4.png Graphic file (type bmp)
+<pic//p4.png>
+[15] [16] (./Report_Test.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 14359 strings out of 476683
+ 334102 string characters out of 5807575
+ 1982012 words of memory out of 5000000
+ 34319 multiletter control sequences out of 15000+600000
+ 539169 words of font info for 96 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 103i,14n,111p,1202b,1205s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on Report_Test.pdf (16 pages).
