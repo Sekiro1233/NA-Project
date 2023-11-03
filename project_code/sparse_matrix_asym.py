@@ -176,14 +176,15 @@ def arnoldi_iteration1(matrix, k):
     return eigenvalues
 
 
-# 对于大的稀疏矩阵，我们只考虑前k列(k<<n)，计算部分特征值，得到的特征值可能不准确
+# 对于大的稀疏矩阵，我们只考虑前m列(m<<n)，计算部分特征值，得到的特征值可能不准确
 def arnoldi_iteration2(matrix, k):
+    m = 30
     n = matrix.shape[0]
-    Q = np.zeros((n, k + 1))
-    H = np.zeros((k + 1, k))
+    Q = np.zeros((n, m + 1))
+    H = np.zeros((m + 1, m))
     b = np.random.rand(n)
     Q[:, 0] = b / np.linalg.norm(b)
-    for j in range(k):
+    for j in range(m):
         v = np.dot(matrix, Q[:, j])
         for i in range(j + 1):
             H[i, j] = np.dot(Q[:, i], v)
@@ -192,7 +193,7 @@ def arnoldi_iteration2(matrix, k):
         if H[j + 1, j] == 0:
             break
         Q[:, j + 1] = v / H[j + 1, j]
-    eigenvalues = qr_iteration(H[:k,], k)
+    eigenvalues = qr_iteration(H[:m, :m], k)
     return eigenvalues
 
 
